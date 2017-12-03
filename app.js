@@ -7,7 +7,7 @@ var user = os.userInfo();
 
 //console.log(user);
 
-fs.appendFile('greetings.txt',  `Hello ${user.username}!\n`, function (err) {
+fs.appendFile('greetings.txt',  `Hello ${user.username}!${os.EOL}`, function (err) {
     if (err) {
         console.log('Unable to write to file');
     }
