@@ -7,8 +7,20 @@ const notes = require('./Notes');
 
 // console.log(_.isString(true));
 // console.log(_.isString('Darron'));
+var command = process.argv[2];
+console.log('Command: ', command);
 
-var filteredArray = (_.uniq(['Frank', 'Darron', 3, 1, 'Andrew', 1, 'Darron', 2, 3,4, 5]));
+if(command === 'add'){
+    console.log('Adding new note');
+} else if (command === 'list') {
+    console.log('Listing all notes');
 
-console.log(filteredArray.sort());
+}else if(command === 'read'){
+    console.log('Reading note');
+} else if(command === 'remove'){
+    console.log('Removing note');
+}else {
+    console.log(`Command [${command}] not recognized`);
+}
+
 
