@@ -9,6 +9,7 @@ const notes = require('./Notes');
 // console.log(_.isString('Darron'));
 var command = process.argv[2];
 console.log('Command: ', command);
+console.log(process.argv[3]);
 
 if(command === 'add'){
     console.log('Adding new note');
