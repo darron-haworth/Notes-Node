@@ -1,5 +1,4 @@
-const fs = require('fs');
-
+const fs = require('fs');                                                                                     
 
 var originalNote = {
     title: 'Some title',
@@ -7,14 +6,10 @@ var originalNote = {
 };
 
 var originalNoteString = JSON.stringify(originalNote);
-
 fs.writeFileSync('notes.json', originalNoteString);
 
 var noteString = fs.readFileSync('notes.json');
-
 var nObj = JSON.parse(noteString);
 
-console.log(nObj);
-
-// var noteObject = JSON.parse(noteString);
-// console.log(noteObject.title);
+console.log(typeof nObj);
+console.log(nObj.title);
